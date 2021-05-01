@@ -8,6 +8,9 @@ import com.kyc.ondato.Ondato
 import com.kyc.ondato.OndatoConfig
 import com.kyc.ondato.OndatoError
 import com.kyc.ondato.enums.Language
+import com.kyc.ondato.sample.custom.LoadingFragmentProvider
+import com.kyc.ondato.sample.custom.StartFragmentProvider
+import com.kyc.ondato.sample.custom.SuccessFragmentProvider
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             .recordProcess(true)
             .setMode(OndatoConfig.Mode.TEST)
             .setLanguage(Language.English)
+//          Overridable screens
+//            .setLoadingScreenProvider(LoadingFragmentProvider)
+//            .setStartScreenProvider(StartFragmentProvider)
+//            .setSuccessScreenProvider(SuccessFragmentProvider)
             .build()
 
         Ondato.init(config)
