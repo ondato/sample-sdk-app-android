@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
             .showConsentScreen(true)
             .showSelfieWithDocumentScreen(true)
             .showSuccessScreen(true)
-            .ignoreLivenessError(false)
-            .ignoreVerificationErrors(false)
             .recordProcess(true)
             .setMode(OndatoConfig.Mode.TEST)
             .setLanguage(Language.English)
